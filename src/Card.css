@@ -1,0 +1,118 @@
+/* src/Card.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    padding-top: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #FFD700;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 40px); /* Adjusting width to add padding */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Equal padding on both sides */
+  }
+  
+  .card {
+    background-color: #212121;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px; /* Maintain the width */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .card:nth-child(1) img,
+  .card:nth-child(2) img {
+    border-radius: 50%;
+  }
+  
+  .card a {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .card-title {
+    margin-top: 10px;
+    color: #DDD;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .card {
+      padding: 20px;
+      min-width: auto; /* Reset width for smaller screens */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.5em;
+    }
+  
+    .container {
+      grid-template-columns: 1fr;
+    }
+  
+    .card {
+      padding: 15px;
+      min-width: auto; /* Reset width for smaller screens */
+    }
+  
+    .card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+  
+    .card a {
+      font-size: 1em;
+    }
+  
+    .card-title {
+      font-size: 0.9em;
+    }
+  }
+  
